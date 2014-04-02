@@ -60,6 +60,7 @@ int main(int argc, char* argv[]) {
 		FILE* out = fopen(fname, "wb");
 		if(!out) {
 			fprintf(stderr, "Error opening output file '%s'!\n", fname);
+			free(data);
 			continue;
 		}
 		
